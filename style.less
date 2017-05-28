@@ -1,0 +1,227 @@
+//单行注释
+/*多行注释*/
+//声明变量
+@background:"red";
+@offsetX:33;
+* {
+  margin: 0;
+  padding: 0;
+}
+//background-color: @background;
+//可以运算
+//@offsetX:@offsetX+10;
+
+.setBackground (@color:"red",@width:100px,@height:100px) {
+  background-color: @color;
+  width: @width;
+  height: @height;
+}
+.position (@type:absolute,@left:0,@top:0,@right:0,@bottom:0){
+  position: @type;
+  left:@left;
+  top: @top;
+  right:@right;
+  bottom: @bottom;
+}
+//可以使用DOM方式 嵌套选择器
+.swiper-container {
+  width: 375px;
+  height: 667px;
+  margin: 50px auto 0;
+  .swiper-wrapper {
+    .swiper-slide {
+      .background-view {
+        .setBackground(#3E88F1,375px,667px);
+        .bottom-image {
+          .position(absolute,0,"","");
+        }
+        .cloud-image {
+          .setBackground("",375px,667px);
+          .position(absolute,0,0,"","");
+        }
+        .plane-image {
+          .setBackground("",375px,667px);
+          .position(absolute,0,45%,"","");
+        }
+        .Txt-image {
+          .position(absolute,21%,6%,"","");
+        }
+        .Flowers01-image {
+          .position(absolute,10%,8%,"","");
+        }
+        .Flowers02-image {
+          .position(absolute,62%,17%,"","");
+        }
+        .arrow-up-image {
+          .position(absolute,45%,"","",3%);
+        }
+        .wasStar-image {
+          .position(absolute,25%,40%,"","");
+        }
+        .wasFarm-image {
+          .position(absolute,25%,54%,"","");
+        }
+        .earlyBuilding-image {
+          .position(absolute,"","","",0);
+        }
+        .earlyTitle-image {
+          .position(absolute,"",5%,"","");
+        }
+        .lastBusStation-image {
+          .position(absolute,"","","",0);
+        }
+        .bus-image {
+          .position(absolute,"","","",6%);
+        }
+        .lastBusAvatar-image {
+          .position(absolute,"","",4%,6%);
+        }
+        .myTeamBg-image {
+          .position(absolute,"","","","");
+        }
+        .myTeamWall-image {
+          .position(absolute,"","",0,0);
+        }
+        .myTeamAvatar-image {
+          .position(absolute,"",30%,6%,"");
+        }
+        .myTeamTxt-image {
+          .position(absolute,20%,30%,"","");
+        }
+        .myTeamTxt01-image {
+          .position(absolute,20%,37%,"","");
+        }
+        .myTeamTxt02-image {
+          .position(absolute,20%,44%,"","");
+        }
+        .myTeamTxt03-image {
+          .position(absolute,20%,51%,"","");
+        }
+        .myteamWhereTxt-image {
+          .position(absolute,28%,75%,"","");
+        }
+        .cornerTitle-image {
+          .position(absolute,"",6%,0,"");
+        }
+        .cornerWall-image {
+          .position(absolute,"","",0,0);
+        }
+        .ligntOff-image {
+          .position(absolute,6%,"","",0);
+        }
+        .footCity-image {
+          .position(absolute,0,0,"","");
+        }
+        .footAvatar-image {
+          .position(absolute,24%,18%,"","");
+        }
+        .footTa-image {
+          .position(absolute,21%,52%,"","");
+        }
+        .runAvatar-image {
+          .position(absolute,17%,15%,"","");
+        }
+        .runTa-image {
+          .position(absolute,14%,55%,"","");
+        }
+        .salaryBg-image {
+          .position(absolute,4%,2%,"","");
+        }
+        .salaryAvatar-image {
+          .position(absolute,24%,6%,"","");
+        }
+        .salaryTa-image {
+          .position(absolute,14%,64%,"","");
+        }
+        .introCloudy-image {
+          .position(absolute,0,12%,"","");
+        }
+        .intro-txt {
+          background: #fc5955;
+          padding: 11px;
+          border-radius: 20px;
+          margin: 11px;
+          height: 67%;
+          position: relative;
+          overflow: hidden;
+          top: 80px;
+        }
+        .intro-txt-inner {
+          text-indent:35px;
+          background: #ef3d38;
+          padding: 35px 20px 150px;
+          border-radius: 3px;
+          color: #fff;
+          font-size: 14px;
+          line-height: 150%;
+          height: 67%;
+        }
+        .introLogo-image {
+          .position(absolute,25%,10%,"","");
+        }
+        .lightFlowers-image {
+          .position(absolute,5%,7%,"","");
+        }
+        .introAvatar-image {
+          .position(absolute,"","",0,0);
+        }
+        .introStar-image {
+          .position(absolute,"","",38%,18%);
+        }
+        .endBg-image {
+          .position(absolute,0,0,"","");
+        }
+        .endLogo-image {
+          .position(absolute,20%,8%,"","");
+        }
+        .endTxt-image {
+          .position(absolute,20%,20%,"","");
+        }
+        .endMail-image {
+          .position(absolute,20%,35%,"","");
+        }
+        .endAvatar-image {
+          .position(absolute,20%,50%,"","");
+        }
+        .endBottomTxt-image {
+          .position(absolute,22%,"","",2%);
+        }
+      }
+    }
+  }
+}
+//以函数的方式 封装样式
+//.backgroundSetting(@color:"red",@shawColor,@width,@height) {
+//  background-color: @color;
+//  box-shadow: @shawColor;
+//  width: @width;
+//  height: @height;
+//}
+//
+//.backgroundSetting("red","gray","100%",600px);
+//封装样式类
+//.color {
+//  color: aqua;
+//  opacity: 0.8;
+//}
+//
+//.some {
+//  color: #1960c8;
+//}
+//.other {
+//  //类似继承
+//  //同时设置 .some和other 的颜色为#1960c8
+//  &:extend(.some);
+//}
+//.setColor(@width:300) when (@width < 500) {
+//  color: blue;
+//}
+//a {
+//  text-decoration: none;
+//  //父选择器 &
+//  &:hover {
+//    color: brown;
+//  }
+//}
+////混合使用样式
+//.color;
